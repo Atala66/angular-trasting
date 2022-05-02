@@ -12,7 +12,6 @@ import { MainViewComponent } from './main-view.component';
 
 @NgModule({
   declarations: [
-    NavigationBarComponent,
 	FirstViewComponent,
 	MainViewComponent
   ],
@@ -23,7 +22,7 @@ import { MainViewComponent } from './main-view.component';
     HttpModule
   ],
   providers: [],
-  exports: [ NavigationBarComponent, FirstViewComponent, MainViewComponent]
+  exports: [ FirstViewComponent, MainViewComponent]
 
 })
 
