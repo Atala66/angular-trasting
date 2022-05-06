@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 import { FirstViewComponent } from './components/first-view/first-view.component';
+import { SecondViewComponent } from './components/second-view/second-view.component';
 
 
 const routes: Routes = [
-	{ path: '', component:  NavigationBarComponent },
-	{ path: 'home', component:  NavigationBarComponent },
+	// { path: '', component:  NavigationBarComponent, pathMatch: 'full' },
+    { path: 'second-view', component:  SecondViewComponent },
 	{ path: 'first-view', component:  FirstViewComponent },
 ];
 
@@ -17,8 +18,6 @@ const routes: Routes = [
 	RouterModule.forRoot(routes)
   ],
   declarations: [],
-  exports: [
-         RouterModule
-  ]
+  exports: [ RouterModule  ]
 })
 export class AppRoutingModule { }

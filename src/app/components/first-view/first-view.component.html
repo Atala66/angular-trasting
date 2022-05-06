@@ -1,3 +1,19 @@
-<p>
-  first-view works!
-</p>
+<div class="cats-container">
+
+    <h1 class="cats-title">Cats Facts</h1>
+
+
+    <table>
+        <ng-container *ngFor="let cat of catFacts">
+            <tr>
+                <td>
+                    <p>{{cat.text}}</p>
+                </td>
+            </tr>
+            <!-- <tr *ngFor="let status of cat.status">
+                <td>{{status}}</td>
+            </tr> -->
+        </ng-container>
+    </table>
+
+</div>
