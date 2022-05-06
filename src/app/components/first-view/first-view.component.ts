@@ -1,3 +1,4 @@
+import { CATCH_ERROR_VAR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { title } from 'process';
 import { FirstViewService } from './first-view-service';
@@ -10,6 +11,7 @@ import { FirstViewService } from './first-view-service';
 })
 export class FirstViewComponent implements OnInit {
 	public catFacts: Array<any>;
+	public newCatsData:  Array<any>;
 
 
 
@@ -19,7 +21,7 @@ export class FirstViewComponent implements OnInit {
 
 	ngOnInit() {
 		this.getCatFacts();
-		// this.getTransformedData();
+		
 
 	}
 
@@ -28,22 +30,22 @@ export class FirstViewComponent implements OnInit {
 	public getCatFacts() {
 		this.first_Srv.getCatFacts().subscribe((data: any) => {
 			this.catFacts = data;
-			this.prepareCatsFacts();
+			this.newCatsData = this.prepareCatsFacts();
 		});
 
 	}
 
 	public prepareCatsFacts() {
-		const copy = this.catFacts.map(object => ({ ...object }));
-		let newData = [];
+	// const copy = this.catFacts.map(object => ({ ...object }));
+		let data = [];
 		this.catFacts.forEach((cat, index) => {
-			newData.push({
-				cat: cat,
-				title: `Interesting fact number :: ${index + 1}`
+			cat.title = `Interesting fact number :: ${index + 1}`;
+			data.push({
+				cat: cat
 			});
 		});
-		return newData;
-
+	console.log(data);
+       return data;
 	}
 
 }
