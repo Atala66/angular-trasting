@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    display: flex;
+    flex-direction: column;
+}
+
+.ng-template {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inside-ng-template {
+    display: flex;
+    justify-content: center; // centra en horizontal
+    align-items: center; // centra en vertical
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    color: #0000;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 25px;
+    margin: 15px 0px;
+    .h-w {
+        // lo nesteamos por integridad pero si lo sacaramos fuera cogeria las propiedades igual!!
+        color: blanchedalmond;
+        font-weight: bold;
+        font-size: 1.9rem // cuantos px son;
+    }
+}
+
+.btn-primary {
+    // lo sacamos del container. no nos interesa que coja sus propiedades 
+    width: 250px;
+    border-radius: 25px;
+}

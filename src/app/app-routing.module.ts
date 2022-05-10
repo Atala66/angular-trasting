@@ -4,10 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 import { FirstViewComponent } from './components/first-view/first-view.component';
 import { SecondViewComponent } from './components/second-view/second-view.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 const routes: Routes = [
+	// NO SE ENRUTA BARRA DE NAVEGACION MONGRER
 	// { path: '', component:  NavigationBarComponent, pathMatch: 'full' },
+	{ path: 'login', component:  LoginComponent },
     { path: 'second-view', component:  SecondViewComponent },
 	{ path: 'first-view', component:  FirstViewComponent },
 ];

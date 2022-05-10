@@ -1,0 +1,19 @@
+.cats-container,
+.cats-title {
+    padding: 0px 50px 0px 50px;
+}
+
+.cats-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    &:hover {
+        color: LightCoral;
+        text-decoration: underline;
+    }
+}
+
+.cats-container {
+    display: flex;
+    flex-direction: row;
+}

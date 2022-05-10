@@ -1,20 +1,20 @@
-<div class="cats-container">
-
-    <h1 class="cats-title">Cats Facts</h1>
+<div>
 
 
-    <table>
-        <ng-container *ngFor="let cat of catFacts">
+    <h1 class="cats-title">
+        Cats Facts in ng-container</h1>
+
+    <table class="cats-container">
+        <ng-container class="cat-facts" *ngFor="let cat of catFacts">
             <tr>
                 <td>
                     <h4>{{ cat.title }}</h4>
                     <p>{{cat.text}}</p>
                 </td>
             </tr>
-            <!-- <tr *ngFor="let status of cat.status">
-                <td>{{status}}</td>
-            </tr> -->
         </ng-container>
     </table>
+
+
 
 </div>

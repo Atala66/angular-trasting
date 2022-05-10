@@ -25,8 +25,6 @@ export class FirstViewComponent implements OnInit {
 
 	}
 
-
-
 	public getCatFacts() {
 		this.first_Srv.getCatFacts().subscribe((data: any) => {
 			this.catFacts = data;
@@ -36,15 +34,14 @@ export class FirstViewComponent implements OnInit {
 	}
 
 	public prepareCatsFacts() {
-	// const copy = this.catFacts.map(object => ({ ...object }));
+	 const copy = this.catFacts.map(object => ({ ...object }));
 		let data = [];
 		this.catFacts.forEach((cat, index) => {
-			cat.title = `Interesting fact number :: ${index + 1}`;
+			cat.title = `Interesting fact number : ${index + 1}`;
 			data.push({
 				cat: cat
 			});
 		});
-	console.log(data);
        return data;
 	}
 

@@ -1,3 +1,35 @@
-<p>
-  second-view works!
-</p>
+<div class="container">
+
+
+    <h1>{{ title }}</h1>
+
+    <!--   WRONG WAY!!!!--------------------------- !!!!>
+		
+		<ng-template *ngIf="home">Go home!!!</ng-template> 
+	  *ngWhatever nunca va funcionar asi en ngTemplate. Hay que pasarla como  input[] -->
+
+    <!-- 1: WRIGHT WAY   -->
+    <ng-template [ngIf]="shouldSayHello" class="ng-template">
+        <div class="inside-ng-template">
+            <p class="h-w">Hello World</p>
+        </div>
+    </ng-template>
+    <ng-template [ngIf]="shouldSayHello" class="ng-template">
+        <div class="inside-ng-template">
+            <p class="h-w">Goodbye World</p>
+        </div>
+    </ng-template>
+
+    <!--    ESTO PASA SI ANIDAMOS DOS NG-TEMPLATES  -->
+    <!-- <ng-template [ngIf]="shouldSayHello" class="ng-template">      
+        <ng-template class="inside-ng-template">
+            <p class="h-w">Goodbye World</p>
+        </ng-template>
+    </ng-template> -->
+
+
+
+
+    <button class="btn btn-primary" (click)="toogleNgTemplate()">Toggle-NgTemplate</button>
+
+</div>
