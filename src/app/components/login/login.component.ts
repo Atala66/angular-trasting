@@ -21,10 +21,17 @@ export class LoginComponent implements OnInit {
 
   public createForm() {
     return this.fb.group({
-		name: new FormControl('', [Validators.required]),
+		firstName: new FormControl('', [Validators.required]),
+		lastName: new FormControl('', [Validators.required]),
 		email: new FormControl('', [Validators.required]),
+		phone: new FormControl('', []),
 		message: new FormControl('', []),
 	 });
   }
+
+
+     onSubmit() {
+         console.log(this.loginForm);
+	 }
 
 }

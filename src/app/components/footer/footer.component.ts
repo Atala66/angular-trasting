@@ -13,13 +13,7 @@ export class FooterComponent implements OnInit {
 
 
 ngOnInit(): void {
-  this.footerTitle = 'Footer';
+  this.footerTitle = 'Trasting Proyect: 2022';
 }
-
-  public sayHellofromFooter() {
-	  console.log('hello from footer!!!');
-  }
-
-
 
 }
