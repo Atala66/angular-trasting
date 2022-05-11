@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FlexboxComponent } from './components/flexbox/flexbox.component';
-import { DemoContentComponent } from './components/demo-content/demo-content.component';
+import { FirstViewModule } from './components/first-view/first-view.module';
 
 
 
@@ -25,8 +25,7 @@ import { DemoContentComponent } from './components/demo-content/demo-content.com
 	 SecondViewComponent,
 	 LoginComponent,
 	 FooterComponent,
-	 FlexboxComponent,
-	 DemoContentComponent
+	 FlexboxComponent
   ],
   imports: [
     BrowserModule,
@@ -35,13 +34,15 @@ import { DemoContentComponent } from './components/demo-content/demo-content.com
     HttpModule,
 	HttpClientModule,
 	MainViewModule,
-	AppRoutingModule
+	AppRoutingModule,
+	FirstViewModule
 
   ],
   providers: [
 	HttpClient,
 	FirstViewService
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

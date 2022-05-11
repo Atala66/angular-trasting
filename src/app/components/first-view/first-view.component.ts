@@ -1,6 +1,5 @@
-import { CATCH_ERROR_VAR } from '@angular/compiler/src/output/output_ast';
+
 import { Component, OnInit } from '@angular/core';
-import { title } from 'process';
 import { FirstViewService } from './first-view-service';
 
 @Component({
@@ -12,6 +11,8 @@ import { FirstViewService } from './first-view-service';
 export class FirstViewComponent implements OnInit {
 	public catFacts: Array<any>;
 	public newCatsData:  Array<any>;
+	public content1: string;
+     public content2: string;
 
 
 
@@ -21,6 +22,8 @@ export class FirstViewComponent implements OnInit {
 
 	ngOnInit() {
 		this.getCatFacts();
+		this.content1 = 'Soy el contenido proyectado en la div verde';
+		this.content2 = 'Soy el contenido proyectado en la div azul';
 		
 
 	}

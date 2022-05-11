@@ -6,6 +6,8 @@ import { HttpModule } from '@angular/http';
 import {NavigationBarComponent } from '../components/navigation-bar/navigation-bar.component';
 import {FirstViewComponent } from '../components/first-view/first-view.component';
 import { MainViewComponent } from './main-view.component';
+import { DemoContentComponent } from 'app/components/demo-content/demo-content.component';
+import { FirstViewModule } from 'app/components/first-view/first-view.module';
  
 
 
@@ -14,16 +16,16 @@ import { MainViewComponent } from './main-view.component';
   declarations: [
 	FirstViewComponent,
 	MainViewComponent
+
   ],
   imports: [
 	CommonModule,
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+	FirstViewModule
   ],
   providers: [],
-  exports: [ FirstViewComponent, MainViewComponent]
-
 })
 
 export class MainViewModule { }

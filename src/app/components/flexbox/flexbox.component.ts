@@ -13,8 +13,8 @@ export class FlexboxComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-	  this.content1 = 'Soy el contenido proyectado en la div verde';
-	  this.content2 = 'Soy el contenido proyectado en la div azul';
+	  this.content1 = 'Ahora mi texto es otro ';
+	  this.content2 = 'A que mola???';
   }
 
 }
