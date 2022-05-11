@@ -1,0 +1,30 @@
+    .demo {
+        padding: 10px;
+        border: 2px solid #fef5;
+        .header {
+            margin: 0;
+            color: #262626;
+            font-size: 22px;
+            font-weight: 300px;
+        }
+    }
+    
+    .flex-container {
+        display: flex;
+        .content,
+        .content-blue {
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            margin-top: 10px;
+            line-height: 20px;
+            color: #FFFFFF;
+            margin: 20px 20px 0px 0px;
+        }
+        .content {
+            background-color: #00b359;
+        }
+        .content-blue {
+            background-color: #66a3ff;
+        }
+    }

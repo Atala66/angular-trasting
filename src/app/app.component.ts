@@ -6,29 +6,13 @@ import { FooterComponent } from './components/footer/footer.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, AfterContentInit, AfterViewInit {
-@ViewChild('footer') footer: ElementRef;
+export class AppComponent implements OnInit{
+
+	constructor() { }
+
+ngOnInit(): void {   }
 
 
-	constructor(
-		public cdRef: ChangeDetectorRef
-	) { }
-
-ngOnInit(): void {
-
- }
-
- ngAfterContentInit(): void {
-	this.cdRef.detectChanges();
-	
-	
-	}
-
-
- ngAfterViewInit(): void {
-	this.footer.nativeElement.value = 'Soy el footer';
-	console.log(this.footer);
- }
 
 
 

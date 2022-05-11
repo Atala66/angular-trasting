@@ -10,10 +10,10 @@ export class SecondViewComponent implements OnInit {
 /**
  // tslint:disable-next-line:max-line-length
  * DOC: https://www.freecodecamp.org/news/everything-you-need-to-know-about-ng-template-ng-content-ng-container-and-ngtemplateoutlet-4b7b51223691/
- 
  */
 
 	public shouldSayHello: boolean;
+	public shouldSayGoodbye: boolean;
 	public title: string = 'NG-TEMPLATE';
 	 public goHome: true;
 
@@ -21,7 +21,7 @@ export class SecondViewComponent implements OnInit {
 
   ngOnInit() {
     this.shouldSayHello = true;
-	// this.home = true;
+	this.shouldSayGoodbye = false;
   }
 
 

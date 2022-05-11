@@ -12,6 +12,9 @@ import { HttpClient, HttpHandler } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FlexboxComponent } from './components/flexbox/flexbox.component';
+import { DemoContentComponent } from './components/demo-content/demo-content.component';
+
 
 
 
@@ -21,7 +24,9 @@ import { FooterComponent } from './components/footer/footer.component';
 	 NavigationBarComponent,
 	 SecondViewComponent,
 	 LoginComponent,
-	 FooterComponent
+	 FooterComponent,
+	 FlexboxComponent,
+	 DemoContentComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +36,7 @@ import { FooterComponent } from './components/footer/footer.component';
 	HttpClientModule,
 	MainViewModule,
 	AppRoutingModule
+
   ],
   providers: [
 	HttpClient,
