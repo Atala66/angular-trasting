@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { DemoContentComponent } from '../demo-content/demo-content.component';
 
+
  
 
 
@@ -18,6 +19,7 @@ import { DemoContentComponent } from '../demo-content/demo-content.component';
     BrowserModule,
     FormsModule,
     HttpModule
+	
   ],
   providers: [],
   exports: [DemoContentComponent ],

@@ -1,15 +1,24 @@
 <section class="container">
 
-    <div class="div">DIV 1</div>
+    <div class="div" (click)="openAlert()">DIV 1</div>
     <div class="div">DIV 2</div>
     <div class="div">DIV 3</div>
     <div class="div">DIV 4</div>
 
 </section>
 
+<!-- cmp hijo directo   -->
+<app-simple-alert #alert title=" Hola" message="hola"></app-simple-alert>
+
+<hr/>
+
+
+
 
 <app-demo-content>
+
+
     <header>Soy el componente proyectado otra vez :)</header>
     <div class="content">{{ content1 }}</div>
-    <div class="content-blue">{{ content2 }}</div>
+    <div click="openAlert()" class="content-blue">{{ content2 }}</div>
 </app-demo-content>

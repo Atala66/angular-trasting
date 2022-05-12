@@ -14,6 +14,9 @@ import { LoginComponent } from './components/login/login.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FlexboxComponent } from './components/flexbox/flexbox.component';
 import { FirstViewModule } from './components/first-view/first-view.module';
+import { SimpleAlertComponent } from './components/simple-alert/simple-alert.component';
+
+
 
 
 
@@ -25,7 +28,8 @@ import { FirstViewModule } from './components/first-view/first-view.module';
 	 SecondViewComponent,
 	 LoginComponent,
 	 FooterComponent,
-	 FlexboxComponent
+	 FlexboxComponent,
+	 SimpleAlertComponent
   ],
   imports: [
     BrowserModule,
