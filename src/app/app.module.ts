@@ -15,6 +15,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FlexboxComponent } from './components/flexbox/flexbox.component';
 import { FirstViewModule } from './components/first-view/first-view.module';
 import { SimpleAlertComponent } from './components/simple-alert/simple-alert.component';
+import { TabComponent } from './components/tab/tab.component';
 
 
 
@@ -29,7 +30,8 @@ import { SimpleAlertComponent } from './components/simple-alert/simple-alert.com
 	 LoginComponent,
 	 FooterComponent,
 	 FlexboxComponent,
-	 SimpleAlertComponent
+	 SimpleAlertComponent,
+	 TabComponent
   ],
   imports: [
     BrowserModule,

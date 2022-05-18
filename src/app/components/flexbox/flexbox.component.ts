@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ContentChild, OnInit, ViewChild } from '@angular/core';
 import { SimpleAlertComponent } from '../simple-alert/simple-alert.component';
 
 
@@ -9,19 +9,25 @@ import { SimpleAlertComponent } from '../simple-alert/simple-alert.component';
 })
 export class FlexboxComponent implements OnInit {
     @ViewChild ('alert') alert: SimpleAlertComponent;
+	@ContentChild(SimpleAlertComponent) alertCmp: SimpleAlertComponent;
 	public content1: string;
 	public content2: string;
 
   constructor() { }
 
   ngOnInit() {
-	  this.content1 = 'Ahora mi texto es otro A que mola??? ';
-	  this.content2 = 'Click me!!';
+	  this.content1 = 'Ahora mi texto es otro. A que mola??? ';
+	  this.content2 = 'Click me  Alert from ng-content!!';
   }
 
 
       public openAlert() {
 		  this.alert.openAlert();
+	  }
+
+
+	  public openAlertFromContent() {
+		  this.alertCmp.openAlert();
 	  }
 
 

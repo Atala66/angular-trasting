@@ -1,6 +1,6 @@
 <section class="container">
 
-    <div class="div" (click)="openAlert()">DIV 1</div>
+    <div class="div" (click)="openAlert()">Click alert from ng-child</div>
     <div class="div">DIV 2</div>
     <div class="div">DIV 3</div>
     <div class="div">DIV 4</div>
@@ -8,7 +8,7 @@
 </section>
 
 <!-- cmp hijo directo   -->
-<app-simple-alert #alert title=" Hola" message="hola"></app-simple-alert>
+<app-simple-alert #alert title=" Hola" message="Soy el alert!!!! "></app-simple-alert>
 
 <hr/>
 
@@ -16,9 +16,12 @@
 
 
 <app-demo-content>
-
-
     <header>Soy el componente proyectado otra vez :)</header>
     <div class="content">{{ content1 }}</div>
-    <div click="openAlert()" class="content-blue">{{ content2 }}</div>
+    <div click="openAlertFromContent()" class="content-blue">{{ content2 }}</div>
+
+
+
+    <app-simple-alert (click)="openAlert()" #alertCmp title=" Hola" message="Soy el alert desde el ng-content!!!! "></app-simple-alert>
+
 </app-demo-content>
