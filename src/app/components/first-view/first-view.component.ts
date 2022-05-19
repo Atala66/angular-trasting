@@ -1,4 +1,5 @@
 
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FirstViewService } from './first-view-service';
 
@@ -50,6 +51,13 @@ export class FirstViewComponent implements OnInit {
 		});
        return data;
 	}
+
+
+
+	// public handleError() {
+	// 	this.first_Srv.errors();
+	// 	console.log();
+	// }
 
 }
 

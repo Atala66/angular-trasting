@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core'
 
 import {
   HttpClient,
+  HttpErrorResponse,
   HttpHeaders,
 } from '@angular/common/http';
 
@@ -36,6 +37,16 @@ export class FirstViewService  {
 
 
 	// Handle errors
+ public errors(error: HttpErrorResponse) {
+	 console.log(error);
+     let errorMessage = '';
+	 if(error.error instanceof ErrorEvent) {
+		 errorMessage = error.error.message;
+	 }
+
+	 return errorMessage;
+ }
+
 
 }
 

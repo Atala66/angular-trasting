@@ -16,6 +16,8 @@ import { FlexboxComponent } from './components/flexbox/flexbox.component';
 import { FirstViewModule } from './components/first-view/first-view.module';
 import { SimpleAlertComponent } from './components/simple-alert/simple-alert.component';
 import { TabComponent } from './components/tab/tab.component';
+import { FlowComponent } from './components/flow/flow.component';
+import { FlowService } from './components/flow/flow.service';
 
 
 
@@ -31,7 +33,8 @@ import { TabComponent } from './components/tab/tab.component';
 	 FooterComponent,
 	 FlexboxComponent,
 	 SimpleAlertComponent,
-	 TabComponent
+	 TabComponent,
+	 FlowComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ import { TabComponent } from './components/tab/tab.component';
   ],
   providers: [
 	HttpClient,
-	FirstViewService
+	FirstViewService,
+	FlowService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]

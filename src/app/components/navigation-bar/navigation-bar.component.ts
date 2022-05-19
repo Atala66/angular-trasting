@@ -21,7 +21,7 @@ export class NavigationBarComponent implements OnInit {
 	  this.addTab({title: 'First View', route: 'first-view'});
 	  this.addTab({title: 'Second View', route: 'second-view'});
 	  this.addTab({title: 'Flexbox', route: 'flexbox'});
-	  console.log(this.navigation);
+	  this.addTab({title: 'Control Flow', route: 'flow'});
   }
 
 

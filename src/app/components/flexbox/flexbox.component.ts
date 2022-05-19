@@ -17,7 +17,7 @@ export class FlexboxComponent implements OnInit {
 
   ngOnInit() {
 	  this.content1 = 'Ahora mi texto es otro. A que mola??? ';
-	  this.content2 = 'Click me  Alert from ng-content!!';
+	  this.content2 = '';
   }
 
 
