@@ -1,5 +1,5 @@
 .tab {
-    display: flex;
-    flex-direction: row;
+    display: inline-block;
     cursor: pointer;
+    min-width: 200px;
 }
