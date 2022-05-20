@@ -1,4 +1,5 @@
-import { Component, ContentChild, OnInit, ViewChild } from '@angular/core';
+
+import { Component, ContentChild, OnInit, ViewChild, ViewChildren } from '@angular/core';
 import { SimpleAlertComponent } from '../simple-alert/simple-alert.component';
 
 
@@ -13,16 +14,26 @@ export class FlexboxComponent implements OnInit {
 	public content1: string;
 	public content2: string;
 
+	// reusable 
+	 public title: string;
+	 public message: string;
+	 public num_divs: number;
+
   constructor() { }
 
   ngOnInit() {
+	  this.num_divs = 4;
 	  this.content1 = 'Ahora mi texto es otro. A que mola??? ';
 	  this.content2 = '';
   }
 
 
-      public openAlert() {
-		  this.alert.openAlert();
+      public openAlert(title: string, msg?: string) {
+		this.alert.title = title;
+		this.alert.message = msg;
+		this.alert.openAlert();
+		
+      
 	  }
 
 

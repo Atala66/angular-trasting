@@ -9,6 +9,7 @@ import { FlowService } from './flow.service';
 export class FlowComponent implements OnInit {
     public dittoData: any;
      public movies: any; 
+	 title: string ="Top 10 Movies" ;
 
 
 	constructor(
@@ -16,8 +17,8 @@ export class FlowComponent implements OnInit {
 	) { }
 
 	ngOnInit() {
-		//this.getDitto();
-	//	console.log('dito::', this.dittoData);
+	// this.getDitto();
+	// console.log('dito::', this.dittoData);
 	this.getMovies();
 
 	}
