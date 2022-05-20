@@ -54,11 +54,6 @@ export class FirstViewComponent implements OnInit {
 
 
 
-	// public handleError() {
-	// 	this.first_Srv.errors();
-	// 	console.log();
-	// }
-
 }
 
 

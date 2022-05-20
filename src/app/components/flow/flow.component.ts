@@ -2,32 +2,52 @@ import { Component, OnInit } from '@angular/core';
 import { FlowService } from './flow.service';
 
 @Component({
-  selector: 'app-flow',
-  templateUrl: './flow.component.html',
-  styleUrls: ['./flow.component.scss']
+	selector: 'app-flow',
+	templateUrl: './flow.component.html',
+	styleUrls: ['./flow.component.scss']
 })
 export class FlowComponent implements OnInit {
-public fishes : any= [] = [];
+    public dittoData: any;
+     public movies: any; 
 
 
-  constructor(
-	  private flow_Srv: FlowService
-  ) { }
+	constructor(
+		private flow_Srv: FlowService
+	) { }
 
-  ngOnInit() {
-	  this.getFishes();
-  }
+	ngOnInit() {
+		//this.getDitto();
+	//	console.log('dito::', this.dittoData);
+	this.getMovies();
+
+	}
 
 
 
 
 
-  public getFishes () {
-      this.fishes = this.flow_Srv.getShiftFacts().subscribe(( response: any ) => {
-		  if(response) {
-			  console.log(response);
-		  }
-	  });
-  }
+	public getDitto() {
+		this.flow_Srv.getDitto().subscribe((response: any) => {
+			if(response) {
+				this.dittoData  = {
+					abilities: response.abilities,
+					sprites: response.sprites,
+					 game_indices: response.game_indices
+				};
+				console.log(this.dittoData);
+			}
+		});
 
+	}
+
+
+
+	 public getMovies() {
+		 this.flow_Srv.getMovies().subscribe(( response: any ) => {
+               if (response) {
+				   this. movies = response;
+				   console.log(this.movies); 
+			   }
+		 });
+	 }
 }
