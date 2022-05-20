@@ -1,0 +1,22 @@
+[{
+        "name": "Pokemon 20",
+        "imageUrl": "./assets/images/pokemon_images/6.png",
+        "comments": ""
+
+    },
+    {
+        "name": "Pokemon 22",
+        "imageUrl": "./assets/images/pokemon_images/22.png",
+        "comments": ""
+    },
+    {
+        "name": "Pokemon 3",
+        "imageUrl": "./assets/images/pokemon_images/3.png",
+        "comments": ""
+    },
+    {
+        "name": "Pokemon 4",
+        "imageUrl": "./assets/images/pokemon_images/22.png",
+        "comments": ""
+    }
+]

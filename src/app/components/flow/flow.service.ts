@@ -11,7 +11,8 @@ import {
 
 export class FlowService {
 	public BASE_URL = 'https://pokeapi.co/api/v2/';
-	public MOCK_URL_MOVIES = '../../../assets/movies_mock.json';
+	public MOCK_URL_MOVIES = '../../../assets/mocks/movies_mock.json';
+	public MOCK_URL_POKEMON = '../../../assets/mocks/pokemon_images.json';
 
 	constructor(
 		private http: HttpClient,
@@ -27,14 +28,14 @@ export class FlowService {
 		});
 		// const requestOptions = { headers: new Headers(headerDict) };
 		return this.http.get(`${this.BASE_URL}pokemon/ditto`);
-
-
 	}
-
 
 	public getMovies() {
 		return this.http.get(`${this.MOCK_URL_MOVIES}`);
+	}
 
+	public getPokemons() {
+		return this.http.get(`${this.MOCK_URL_POKEMON}`);
 	}
 
 	// Update

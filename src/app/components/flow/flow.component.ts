@@ -7,9 +7,11 @@ import { FlowService } from './flow.service';
 	styleUrls: ['./flow.component.scss']
 })
 export class FlowComponent implements OnInit {
-    public dittoData: any;
-     public movies: any; 
-	 title: string ="Top 10 Movies" ;
+	public dittoData: any;
+	public dittoSprites: any;
+	public movies: any;
+	public pokemonImages: any;
+	title: string = "Top 10 Movies";
 
 
 	constructor(
@@ -17,9 +19,9 @@ export class FlowComponent implements OnInit {
 	) { }
 
 	ngOnInit() {
-	// this.getDitto();
-	// console.log('dito::', this.dittoData);
-	this.getMovies();
+		this.getDitto();
+		console.log('dito::', this.dittoData);
+		this.getMovies();
 
 	}
 
@@ -29,26 +31,44 @@ export class FlowComponent implements OnInit {
 
 	public getDitto() {
 		this.flow_Srv.getDitto().subscribe((response: any) => {
-			if(response) {
-				this.dittoData  = {
+			if (response) {
+				this.dittoData = {
 					abilities: response.abilities,
 					sprites: response.sprites,
-					 game_indices: response.game_indices
+					game_indices: response.game_indices
 				};
-				console.log(this.dittoData);
 			}
 		});
 
 	}
 
 
+	private getDittoSprites() {
+		const dittoData = { ...this.dittoData };
+		// tslint:disable-next-line:forin
+		const arr = [];
+		// tslint:disable-next-line:forin
+		for (const image in dittoData.sprites) {
+			arr.push(`${image} 1:: ${dittoData.sprites[image]}`);
+		}
+	return arr;
+	}
 
-	 public getMovies() {
-		 this.flow_Srv.getMovies().subscribe(( response: any ) => {
-               if (response) {
-				   this. movies = response;
-				   console.log(this.movies); 
-			   }
-		 });
-	 }
+
+	public getMovies() {
+		this.flow_Srv.getMovies().subscribe((response: any) => {
+			if (response) {
+				this.movies = response;
+			}
+		});
+	}
+
+	public getPokemons() {
+		this.flow_Srv.getPokemons().subscribe((response: any) => {
+			if (response) {
+				this.pokemonImages = response;
+				console.log( this.pokemonImages);
+			}
+		});
+	}
 }

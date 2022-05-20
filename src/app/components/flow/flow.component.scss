@@ -4,3 +4,28 @@
     margin: 50px;
     background-color: rgb(212, 212, 184);
 }
+
+.btn-warning {
+    margin-left: 20px;
+}
+
+.section-pkm {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+    .div-pkm {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: antiquewhite;
+        border: 3px, solid azure;
+        padding: 18px;
+        margin: 20px;
+        width: 250px;
+        height: 250px;
+        border-radius: 2%;
+        background-color: antiquewhite;
+    }
+}

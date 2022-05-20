@@ -54,3 +54,13 @@
         </div>
     </div>
 </div>
+
+<button type="button" class="btn btn-warning" (click)="getPokemons()">GET POKEMONS</button>
+<section class="section-pkm">
+    <div *ngFor="let pokemon of pokemonImages" class="div-pkm">
+        <p>{{ pokemon.name}}</p>
+        <img [src]="pokemon.imageUrl">
+        <p>{{ pokemon.comments }}</p>
+    </div>
+
+</section>
