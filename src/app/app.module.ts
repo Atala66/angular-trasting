@@ -19,7 +19,7 @@ import { TabComponent } from './components/tab/tab.component';
 import { FlowComponent } from './components/flow/flow.component';
 import { FlowService } from './components/flow/flow.service';
 import { TestDecoratorDirective } from './directives/test-decorator.directive';
-import { TestPipe } from './pipe/testpipe.pipe';
+import { TestPipe } from './pipes/testpipe.pipe';
 
 
 
