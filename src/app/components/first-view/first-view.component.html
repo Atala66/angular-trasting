@@ -9,6 +9,7 @@
                 <td>
                     <h4 class="title">{{ cat.title }}</h4>
                     <hr>
+                    <input type="checkbox" (click)="deleteData(catFacts, 1)" />
                     <p class="text">{{cat.text}}</p>
                 </td>
             </tr>

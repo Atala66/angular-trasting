@@ -4,12 +4,11 @@
     flex-direction: column;
 }
 
-.ng-template {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+// .ng-template {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
 .inside-ng-template {
     display: flex;
     justify-content: center; // centra en horizontal
@@ -34,4 +33,9 @@
     // lo sacamos del container. no nos interesa que coja sus propiedades 
     width: 250px;
     border-radius: 25px;
+}
+
+.green_btn {
+    background-color: green;
+    border-color: green;
 }

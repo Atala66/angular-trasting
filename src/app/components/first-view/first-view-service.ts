@@ -16,7 +16,6 @@ export class FirstViewService  {
 
 	constructor(
 		private http: HttpClient,
-		
 	) { 
 		this. UR_CAT_FACTS = `${this.BASE_URL}/facts`;
 	 }

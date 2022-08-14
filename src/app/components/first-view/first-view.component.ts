@@ -28,7 +28,6 @@ export class FirstViewComponent implements OnInit {
 		this.getCatFacts();
 		this.content1 = 'Soy el contenido proyectado en la div verde';
 		this.content2 = 'Soy el contenido proyectado en la div azul';
-		
 
 	}
 
@@ -41,7 +40,7 @@ export class FirstViewComponent implements OnInit {
 	}
 
 	public prepareCatsFacts() {
-	 const copy = this.catFacts.map(object => ({ ...object }));
+	  this.catFacts.map(object => ({ ...object }));
 		let data = [];
 		this.catFacts.forEach((cat, index) => {
 			cat.title = `Interesting fact number : ${index + 1}`;
@@ -50,6 +49,16 @@ export class FirstViewComponent implements OnInit {
 			});
 		});
        return data;
+	}
+
+
+
+	public deleteData(list: Array<any>, key: number) {
+		const item = list.find((item: any) => {
+			return item.text === key;
+		});
+		list.splice(list.indexOf(item), 1);
+
 	}
 
 

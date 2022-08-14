@@ -18,9 +18,8 @@ import { SimpleAlertComponent } from './components/simple-alert/simple-alert.com
 import { TabComponent } from './components/tab/tab.component';
 import { FlowComponent } from './components/flow/flow.component';
 import { FlowService } from './components/flow/flow.service';
-
-
-
+import { TestDecoratorDirective } from './directives/test-decorator.directive';
+import { TestPipe } from './pipe/testpipe.pipe';
 
 
 
@@ -34,7 +33,9 @@ import { FlowService } from './components/flow/flow.service';
 	 FlexboxComponent,
 	 SimpleAlertComponent,
 	 TabComponent,
-	 FlowComponent
+	 FlowComponent,
+	 TestDecoratorDirective,
+	 TestPipe
   ],
   imports: [
     BrowserModule,
@@ -46,6 +47,9 @@ import { FlowService } from './components/flow/flow.service';
 	AppRoutingModule,
 	FirstViewModule
 
+  ],
+  exports: [
+	TestDecoratorDirective 
   ],
   providers: [
 	HttpClient,

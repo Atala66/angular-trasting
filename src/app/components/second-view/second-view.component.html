@@ -2,6 +2,7 @@
 
 
     <h1>{{ title }}</h1>
+    <input [(ngModel)]="title" />
 
     <!--   WRONG WAY!!!!--------------------------- !!!!>
 		
@@ -15,7 +16,7 @@
         </div>
     </ng-template>
     <ng-template [ngIf]="shouldSayGoodbye" class="ng-template">
-        <div class="inside-ng-template">
+        <div class="inside-ng-template" [appTestDecorator]="color">
             <p class="h-w">Goodbye World</p>
         </div>
     </ng-template>
@@ -28,8 +29,6 @@
     </ng-template> -->
 
 
-
-
-    <button class="btn btn-primary" (click)="toogleNgTemplate()">Toggle-NgTemplate</button>
+    <button class="btn btn-primary" [ngClass]="{'green_btn': !this.shouldSayHello } " (click)="toogleNgTemplate()">Toggle-NgTemplate</button>
 
 </div>
