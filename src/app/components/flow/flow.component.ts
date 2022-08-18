@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FlowService } from './flow.service';
+import { FlowService } from '../../services/flow.service';
 
 @Component({
 	selector: 'app-flow',
@@ -20,7 +20,6 @@ export class FlowComponent implements OnInit {
 
 	ngOnInit() {
 		this.getDitto();
-		console.log('dito::', this.dittoData);
 		this.getMovies();
 
 	}

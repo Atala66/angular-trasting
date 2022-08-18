@@ -1,14 +1,10 @@
-import { Component, ComponentFactoryResolver, ElementRef, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { from } from 'rxjs/observable/from';
-import { of } from 'rxjs/observable/of';
-import { map, filter } from 'rxjs/operators';
+import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-second-view',
   templateUrl: './second-view.component.html',
   styleUrls: ['./second-view.component.scss']
 })
-export class SecondViewComponent implements OnInit, AfterViewInit {
+export class SecondViewComponent implements OnInit {
 
 /**
  // tslint:disable-next-line:max-line-length
@@ -26,58 +22,23 @@ export class SecondViewComponent implements OnInit, AfterViewInit {
 		{nombre: 'Jane', apellidos: 'Doe', edad : 25, isAlive: true }
 	 ];
 
+	 public numTest: number = 4;
+
   constructor(
   ) { }
 
   ngOnInit() {
-	  this.color = 'blue';
-	  this.loopPeople();
-	  this.filterObservable();
-	  this.mapObservable();
-	// this.createObservablewithOf();
-	// this.createObservablewithFrom();
+	this.color = 'blue';
+	this.loopPeople();
     this.shouldSayHello = true;
 	this.shouldSayGoodbye = true;
   }
 
-  ngAfterViewInit () { }
 
 
   public toogleNgTemplate() {
 	this.shouldSayHello = !this.shouldSayHello;
   }
-
-
-public createObservablewithOf() {
-	const arr = [1, 2, 3, 4, 5];
-    const $arr = of(arr);
-	$arr.subscribe((values) => console.log(`Emmited values`, values));
-}
-
-public createObservablewithFrom() {
-	const arr = [1, 2, 3, 4, 5];
-    const $arr = from(arr);
-	$arr.subscribe((values) => console.log(`Emmited values`, values));
-}
-
-
-public filterObservable() {
-	const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-	const $arr = from(arr);
-	$arr
-	.pipe(
-	 filter((value) => (value >= 4)))
-	.subscribe((value) => console.log(`Emmited values`, value));
-
-}
-
-
-public mapObservable() {
-	const data = [1, 2, 3, 4, 5];
-	const $data = from(data);
-	$data.pipe(map((number: any) => number * 2)).subscribe((number) => console.log(`Mapped numbers::`, number));
-}
-
 
  public loopPeople() {
 	 const persona1 = this.people[0];

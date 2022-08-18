@@ -7,6 +7,7 @@ import { SecondViewComponent } from './components/second-view/second-view.compon
 import { LoginComponent } from './components/login/login.component';
 import { FlexboxComponent } from './components/flexbox/flexbox.component';
 import { FlowComponent } from './components/flow/flow.component';
+import { ObservablesComponent } from './components/observables/observables.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
 	{ path: 'first-view', component:  FirstViewComponent },
 	{ path: 'flexbox', component:  FlexboxComponent },
 	{ path: 'flow', component:  FlowComponent },
+	{ path: 'observables', component:  ObservablesComponent },
 ];
 
 @NgModule({

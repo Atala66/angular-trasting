@@ -13,9 +13,7 @@ export class TabComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-	  // this.goToRoute();
-  }
+  ngOnInit() { }
 
 
   public goToRoute() {

@@ -1,8 +1,7 @@
 <div class="container">
-
-
+    <!-- 
     <h1>{{ title }}</h1>
-    <input [(ngModel)]="title" />
+    <input [(ngModel)]="title" /> -->
 
     <!--   WRONG WAY!!!!--------------------------- !!!!>
 		
@@ -10,25 +9,34 @@
 	  *ngWhatever nunca va funcionar asi en ngTemplate. Hay que pasarla como  input[] -->
 
     <!-- 1: WRIGHT WAY   -->
-    <ng-template [ngIf]="shouldSayHello" class="ng-template">
+    <ng-template [ngIf]="shouldSayHello">
         <div class="inside-ng-template">
             <p class="h-w">Hello World</p>
         </div>
     </ng-template>
-    <ng-template [ngIf]="shouldSayGoodbye" class="ng-template">
+
+    <ng-template [ngIf]="shouldSayGoodbye">
         <div class="inside-ng-template" [appTestDecorator]="color">
             <p class="h-w">Goodbye World</p>
         </div>
     </ng-template>
 
+    <ng-template [ngIf]="shouldSayGoodbye">
+        <div class="inside-ng-template">
+            <p class="test-pipe">{{ numTest | testpipe }}</p>
+        </div>
+    </ng-template>
+
+
+
     <!--    ESTO PASA SI ANIDAMOS DOS NG-TEMPLATES  -->
-    <!-- <ng-template [ngIf]="shouldSayHello" class="ng-template">      
+    <!-- <ng-template [ngIf]="shouldSayHello">      
         <ng-template class="inside-ng-template">
             <p class="h-w">Goodbye World</p>
         </ng-template>
     </ng-template> -->
 
-
-    <button class="btn btn-primary" [ngClass]="{'green_btn': !this.shouldSayHello } " (click)="toogleNgTemplate()">Toggle-NgTemplate</button>
-
 </div>
+
+
+<button class="btn btn-primary" [ngClass]="{'green_btn': !this.shouldSayHello } " (click)="toogleNgTemplate()">Toggle-NgTemplate</button>

@@ -17,9 +17,10 @@ import { FirstViewModule } from './components/first-view/first-view.module';
 import { SimpleAlertComponent } from './components/simple-alert/simple-alert.component';
 import { TabComponent } from './components/tab/tab.component';
 import { FlowComponent } from './components/flow/flow.component';
-import { FlowService } from './components/flow/flow.service';
+import { FlowService } from './services/flow.service';
 import { TestDecoratorDirective } from './directives/test-decorator.directive';
 import { TestPipe } from './pipes/testpipe.pipe';
+import { ObservablesComponent } from './components/observables/observables.component';
 
 
 
@@ -35,7 +36,8 @@ import { TestPipe } from './pipes/testpipe.pipe';
 	 TabComponent,
 	 FlowComponent,
 	 TestDecoratorDirective,
-	 TestPipe
+	 TestPipe,
+	 ObservablesComponent
   ],
   imports: [
     BrowserModule,
@@ -47,9 +49,6 @@ import { TestPipe } from './pipes/testpipe.pipe';
 	AppRoutingModule,
 	FirstViewModule
 
-  ],
-  exports: [
-	TestDecoratorDirective 
   ],
   providers: [
 	HttpClient,
