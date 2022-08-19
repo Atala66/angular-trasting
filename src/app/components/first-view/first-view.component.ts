@@ -52,12 +52,8 @@ export class FirstViewComponent implements OnInit {
 
 
 
-	public deleteData(list: Array<any>, key: number) {
-		const item = list.find((item: any) => {
-			return item.text === key;
-		});
-		list.splice(list.indexOf(item), 1);
-
+	public deleteCat(catToDelete: any): void {
+		this.catFacts = this.catFacts.filter((item =>  item !== catToDelete ));
 	}
 
 

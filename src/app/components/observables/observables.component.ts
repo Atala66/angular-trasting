@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PeopleService } from 'app/services/people.service';
 import { from } from 'rxjs/observable/from';
 import { of } from 'rxjs/observable/of';
 import { map, filter } from 'rxjs/operators';
@@ -11,15 +12,26 @@ import { map, filter } from 'rxjs/operators';
 export class ObservablesComponent implements OnInit {
 
 
-	constructor() { }
+	constructor(
+		private peopleSrv: PeopleService
+	) { }
 
 	ngOnInit() {
-		 this.createObservablewithOf();
-		 this.createObservablewithFrom();
+
+		this.getPeople();
+		//  this.createObservablewithOf();
+		//  this.createObservablewithFrom();
 		// this.filterObservable();
 		// this.mapObservable();
 	}
 
+
+	public getPeople() {
+		this.peopleSrv.getPeople().subscribe((data: any) => {
+			if (data) {  console.log(data);  }
+		});
+
+	}
 
 	public createObservablewithOf() {
 		const arr = [1, 2, 3, 4, 5];
@@ -48,6 +60,8 @@ export class ObservablesComponent implements OnInit {
 		const $data = from(data);
 		$data.pipe(map((number: any) => number * 2)).subscribe((number) => console.log(`Mapped numbers::`, number));
 	}
+
+
 
 
 

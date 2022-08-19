@@ -21,6 +21,7 @@ import { FlowService } from './services/flow.service';
 import { TestDecoratorDirective } from './directives/test-decorator.directive';
 import { TestPipe } from './pipes/testpipe.pipe';
 import { ObservablesComponent } from './components/observables/observables.component';
+import { PeopleService } from './services/people.service';
 
 
 
@@ -53,7 +54,8 @@ import { ObservablesComponent } from './components/observables/observables.compo
   providers: [
 	HttpClient,
 	FirstViewService,
-	FlowService
+	FlowService,
+	PeopleService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
