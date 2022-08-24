@@ -22,6 +22,8 @@ import { TestDecoratorDirective } from './directives/test-decorator.directive';
 import { TestPipe } from './pipes/testpipe.pipe';
 import { ObservablesComponent } from './components/observables/observables.component';
 import { PeopleService } from './services/people.service';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { ShoppingCartItemComponent } from './components/shopping-cart-item/shopping-cart-item.component';
 
 
 
@@ -38,7 +40,9 @@ import { PeopleService } from './services/people.service';
 	 FlowComponent,
 	 TestDecoratorDirective,
 	 TestPipe,
-	 ObservablesComponent
+	 ObservablesComponent,
+	 ShoppingCartComponent,
+	 ShoppingCartItemComponent
   ],
   imports: [
     BrowserModule,

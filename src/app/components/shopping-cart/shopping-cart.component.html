@@ -1,0 +1,8 @@
+<p class="title">
+    Mi pedido</p>
+
+<app-shopping-cart-item *ngFor="let item of cartItems" [cartItem]="item" (cartItemDelete)="deleteItem(item)"></app-shopping-cart-item>
+
+
+<p class="total"><span class="total-label">total:</span>00.00 €</p>
+<button>Finalizar pedido</button>

@@ -22,6 +22,7 @@ export class NavigationBarComponent implements OnInit {
 		this.addTab({ title: 'Flexbox', route: 'flexbox' });
 		this.addTab({ title: 'Control Flow', route: 'flow' });
 		this.addTab({ title: 'Observables', route: 'observables' });
+		this.addTab({ title: 'Shopping cart', route: 'shopping' });
 	}
 
 

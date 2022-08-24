@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { FlexboxComponent } from './components/flexbox/flexbox.component';
 import { FlowComponent } from './components/flow/flow.component';
 import { ObservablesComponent } from './components/observables/observables.component';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
 	{ path: 'flexbox', component:  FlexboxComponent },
 	{ path: 'flow', component:  FlowComponent },
 	{ path: 'observables', component:  ObservablesComponent },
+	{ path: 'shopping', component:  ShoppingCartComponent },
 ];
 
 @NgModule({
