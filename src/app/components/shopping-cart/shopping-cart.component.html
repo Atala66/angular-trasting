@@ -1,8 +1,12 @@
-<p class="title">
-    Mi pedido</p>
+<p class="title">Mi pedido</p>
 
-<app-shopping-cart-item *ngFor="let item of cartItems" [cartItem]="item" (cartItemDelete)="deleteItem(item)"></app-shopping-cart-item>
+<button class="show-hide-btn" (click)="toogleItemsVisibility()">
+	{{ showItems ? "Ocultar" : "Mostrar" }}
+</button>
 
+<ng-container *ngIf="showItems">
+    <app-shopping-cart-item *ngFor="let item of cartItems" [cartItem]="item" (cartItemDelete)="deleteItem(item)"></app-shopping-cart-item>
+</ng-container>
 
-<p class="total"><span class="total-label">total:</span>00.00 €</p>
+<p class="total"><span class="total-label">Total: </span> {{ total }} €</p>
 <button>Finalizar pedido</button>

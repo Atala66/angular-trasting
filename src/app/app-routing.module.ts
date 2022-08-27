@@ -19,7 +19,7 @@ const routes: Routes = [
 	{ path: 'first-view', component:  FirstViewComponent },
 	{ path: 'flexbox', component:  FlexboxComponent },
 	{ path: 'flow', component:  FlowComponent },
-	{ path: 'observables', component:  ObservablesComponent },
+	// { path: 'observables', component:  ObservablesComponent },
 	{ path: 'shopping', component:  ShoppingCartComponent },
 ];
 

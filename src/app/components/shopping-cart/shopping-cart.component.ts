@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShoppingCartService } from 'app/services/shopping-cart.service';
 import { CartItem } from '../shopping-cart-item/shopping-cart-item.interface';
 
 @Component({
@@ -7,27 +8,34 @@ import { CartItem } from '../shopping-cart-item/shopping-cart-item.interface';
   styleUrls: ['./shopping-cart.component.scss']
 })
 export class ShoppingCartComponent implements OnInit {
-	public  cartItems: CartItem[] = [
-		{
-			imageUrl: 'assets/images/beats.jpg',
-			name: 'Auriculares',
-			price: 12.50
-		},
-		{
-			imageUrl: 'assets/images/teclado.jpg',
-			name: 'Teclado',
-			price: 25.20
-		}
-	];
+//    public cartItems = this.shoppingCartSrv.cartItems;
 
-  constructor() { }
+  showItems = true;
+
+  constructor(
+	private shoppingCartSrv: ShoppingCartService
+  ) { }
 
   ngOnInit() { }
 
 
-  deleteItem(itemToDelete: CartItem) {
-	this.cartItems = this.cartItems.filter((item =>  item !== itemToDelete ));
 
+  get cartItems(): CartItem[] {
+	return this.shoppingCartSrv.cartItems;
   }
+
+  get total() {
+	return this.shoppingCartSrv.total;
+  }
+
+  deleteItem(itemToDelete: CartItem): void {
+     this.shoppingCartSrv.deleteItem(itemToDelete);
+  }
+
+  toogleItemsVisibility() {
+	this.showItems = !this.showItems;
+  }
+
+
 
 }

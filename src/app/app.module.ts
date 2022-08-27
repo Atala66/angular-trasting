@@ -24,6 +24,7 @@ import { ObservablesComponent } from './components/observables/observables.compo
 import { PeopleService } from './services/people.service';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { ShoppingCartItemComponent } from './components/shopping-cart-item/shopping-cart-item.component';
+import { ShoppingCartService } from './services/shopping-cart.service';
 
 
 
@@ -59,7 +60,8 @@ import { ShoppingCartItemComponent } from './components/shopping-cart-item/shopp
 	HttpClient,
 	FirstViewService,
 	FlowService,
-	PeopleService
+	PeopleService,
+	ShoppingCartService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
